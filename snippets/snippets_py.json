@@ -1,0 +1,35 @@
+{
+    "RPi try-except-finally": {
+        "prefix": "1MCT.try_except_finally",
+        "body": [
+            "from RPi import GPIO",
+            "import time",
+            "GPIO.setmode(GPIO.BCM)",
+            "",
+            "try:",
+            "print(\"hello world\")",
+            "except KeyboardInterrupt:",
+            "    print(\"Gestopt\")",
+            "finally:",
+            "    GPIO.cleanup()"
+        ],
+        "description": "Snippet voor RPi try-except-finally structuur"
+    },
+    "RPi led setup": {
+        "prefix": "1MCT.led_setup",
+        "body": [
+            "led = ${1:00}",
+            "GPIO.setup(led, GPIO.OUT)",
+            "#pwm_led = GPIO.PWM(led, ${2:1000})"
+        ],
+        "descrition": "Snippet voor Rpi led setup met optionele PWM"
+    },
+    "RPi button pullup setup": {
+        "prefix": "1MCT.button_pullup_setup",
+        "body": [
+            "button = ${1:00}",
+            "GPIO.setup(led, GPIO.IN, pull_up_down=GPIO.PUD_UP)"
+        ],
+        "descrition": "Snippet voor Rpi button setup met ingebouwde pullup"
+    }
+}

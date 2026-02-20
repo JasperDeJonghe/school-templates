@@ -1,0 +1,41 @@
+{
+  "icon": "images/logo.png",
+  "name": "school-templates",
+  "displayName": "School_templates",
+  "publisher": "Jasper De Jonghe",
+  "description": "Templates for school",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./snippets/snippets_py.json"
+      }
+    ],
+    "commands": [{
+      "command": "school-templates.helloWorld",
+      "title": "Hello VS Code"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.109.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.39.2",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
